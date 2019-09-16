@@ -1,28 +1,112 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<div class="wrapper">
+  <header class="page-header">
+   <nav>
+    <ul >
+      <li>
+          <a v-on:click="changeComponents('profile')">
+            Profile
+          </a>
+      
+      </li>
+      <li>    
+        <a v-on:click="changeComponents('experience')">
+               Experience
+          </a>
+      </li>
+      <li>         
+        <a v-on:click="changeComponents('proyects')">
+               Proyects
+          </a>
+      </li>
+       <li> 
+          <a v-on:click="changeComponents('skills')">
+            Skills
+          </a>
+      </li>
+      <li>  
+        <a v-on:click="changeComponents('info')">
+               Contact
+          </a>
+      </li>
+    </ul>
+  </nav>
+  </header>
+
+  <main class="page-main">  
+    <div v-show="component.profile" >
+    <Profile/>
+    </div>
+    <div v-show="component.experience" >
+    <Experience/>
+    </div>
+    <div v-show="component.skills" >
+    <Skills/>
+    </div>
+    <div v-show="component.proyects" >
+    <Proyects/>
+    </div>
+    <div v-show="component.info" >
+    <Info/>
+    </div>
+  
+  </main>
+
+
+  <footer class="page-footer">
+     <small>© Copyright 2019. All rights reserved.</small>
+     <small>Create by: Juan Dubie</small>
+  </footer>
+</div>
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Profile from './components/Profile.vue'
+import Experience from './components/Experience.vue'
+import Info from './components/Info.vue'
+import Proyects from './components/Proyects.vue'
+import Skills from './components/Skills.vue'
+import { mapState, mapActions,mapMutations,mapGetters } from 'vuex'
+
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Profile,
+    Experience,
+    Proyects,
+    Skills,
+    Info
+  },
+  data: () => {
+    return {
+
+    
+    }
+    
+
+    
+  },
+  methods:{
+
+     ...mapMutations([
+      'change'
+    ]),
+
+     changeComponents (data){
+      this.change(data)
   }
+
+  },
+  computed:{
+
+ ...mapGetters({
+     component: 'components'
+  })
+
+  }
+
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
