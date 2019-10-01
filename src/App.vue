@@ -2,6 +2,9 @@
 <div class="wrapper">
   <header class="page-header">
    <nav>
+     <h2 class="logo">
+      LOGO
+    </h2>
     <ul >
       <li>
           <a  v-bind:class="[component.profile===true?'active':'']" v-on:click="changeComponents('profile')">
@@ -25,7 +28,7 @@
           </a>
       </li>
       <li>  
-        <a v-bind:class="[component.info===true?'active':'']" v-on:click="changeComponents('info')">Info</a>
+        <a v-bind:class="[component.info===true?'active':'']" v-on:click="changeComponents('info')">Contact</a>
       </li>
     </ul>
   </nav>
@@ -44,7 +47,7 @@
     <div v-show="component.proyects" >
     <Proyects/>
     </div>
-    <div v-show="component.info" >
+    <div v-show="component.info">
     <Info/>
     </div>
   
@@ -93,7 +96,6 @@ export default {
     ]),
 
      changeComponents (data){
-
       this.change(data)
   }
 

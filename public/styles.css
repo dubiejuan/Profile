@@ -6,6 +6,7 @@ body{
   margin: 0px;
 }
 
+
 .wrapper {
   display: flex;
   flex-flow: column;
@@ -17,17 +18,24 @@ body{
   background: white;
 }
 
+.page-header nav{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .page-header ul{
 display: flex;
-flex-flow: row wrap;
-align-items: center;
-justify-content: space-around;
+width: auto;
+margin-top: 0;
 list-style-type: none;
-padding-right: 2%;
 
 }
 
+.page-header ul li{
+  margin-left: 60px; 
+  }
 
 .page-header ul li a {
 
@@ -76,6 +84,9 @@ padding-right: 2%;
 
 }
  
+
+
+
 .email{
   padding: 0.5% 0% 0.5% 0%;
   display: flex;
@@ -84,6 +95,29 @@ padding-right: 2%;
   
 }
 
+.proyects{
+margin:5%;
+
+
+}
+
+
+.proyects ul{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+   
+}
+
+.proyects ul li div{
+margin-top: 30px;
+background: blue;
+width: 415px;
+height: 258px;  
+}
+
+
+/*CONTACT*/
 .email >div{
   margin: 10px 0px 10px 0px;
 }
@@ -148,6 +182,12 @@ textarea{
   
 }
 
+
+.errors{
+  color: red;
+  margin: 7px 0px 0px 0px;
+  font-size: 14px;
+}
 
 
 

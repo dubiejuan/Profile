@@ -5,7 +5,7 @@
     mail:{
         name:'',
         email:'',
-        mesaage:''
+        message:''
         }
   }
   
@@ -16,28 +16,28 @@
   }
   }
 
-  
+
   // actions  api data
   const actions = {
         sendEmail (data) {
-        axios.post('http://localhost:3001/mail/send-email', {  
+          return new Promise((resolve, reject) => {
+            axios.post('http://localhost:3001/mail/send-email', {  
             data:data.state.mail
-          })
-          .then(function (response) {
-             state.mail={
-                name:'',
-                email:'',
-                mesaage:''
-                }
-
-
-          })
-
-          .catch(function (error) {
-
+          }).then(response => {
+                console.log(response)
+                state.mail={
+                  name:'',
+                  email:'',
+                  message:''
+                  }
+                resolve(response)
+            })
+            .catch( (error) => {
+              reject(JSON.stringify(error))
+            })
             
-
-          })
+        })
+         
     }
        
     

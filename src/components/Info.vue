@@ -7,16 +7,18 @@
 
 <div class="email" > 
   <div>
-    <input  v-model="mail.name" type="text" placeholder="Name" > 
+    <input  v-model="mail.name" type="text"  placeholder="Name" > 
   </div>
   <div>
-    <input  v-model="mail.email" type="text" placeholder="Email*" > 
+    <input  v-model="mail.email" type="email" placeholder="Email*" > 
+     <p v-show="error.email" class="errors"> Please enter a valid email address.</p>
   </div>
   <div>
    <textarea v-model="mail.message" rows="10"  placeholder="Message*"></textarea>  
+    <p  v-show="error.message" class="errors"> Please fill in this required field.</p>
    </div>
    <div>
-   <button  class="button-send" v-on:click="sendData(mail)" >Send</button> 
+   <button  class="button-send" v-on:click="sendData(mail)" :disabled=isDisabled >Send</button> 
   </div>
 </div>
 <div class="social">
@@ -62,11 +64,12 @@ export default {
   },
   data:()=>{
       return {
-
+      error:{
+        message:false,
+        email:false
+      },
+      validated:false
       }
-
-      
-
   },
   methods:{
 
@@ -74,15 +77,52 @@ export default {
       'sendEmail'
     ]),
 
+     checkData(){
+    if(this.mail.email.length<=1){
+      this.error.email=true
+      return false
+    } else if (!this.validEmail(this.mail.email)) {
+      this.error.email=true
+      return false
+      }else{
+      this.error.email=false 
+    }
+
+    if(this.mail.message.length>=1){
+      this.error.message=false
+    }else{
+      this.error.message=true
+      return false
+    }
+    return true
+    },
+
   async sendData(mailParams){
+    if(this.checkData() === true){
+    this.validated=true;
+  try{
     let response =  await this.sendEmail(mailParams)
+    console.log('response',response)
+  }catch(error){
+    console.log('error',error)
   }
+    this.validated=false;
+    }
+  },
+   validEmail(email) {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      console.log(re.test(email))
+      return re.test(email);
+    }
 
   },
   computed:{
  ...mapGetters({
      mail: 'mail'
-  })
+  }),
+   isDisabled() {
+    return this.validated;
+  }
 
   }
 }
