@@ -1,6 +1,10 @@
 
+*{margin:0; padding:0;}
 
-
+body{
+  font-family: 'Arial';
+  margin: 0px;
+}
 
 .wrapper {
   display: flex;
@@ -8,18 +12,19 @@
   min-height: 100vh;
 }
 
-
 .page-header {
-  background: #f2f2f2
+  padding: 1%;
+  background: white;
 }
 
+
 .page-header ul{
-padding-top: 16px;
 display: flex;
 flex-flow: row wrap;
 align-items: center;
 justify-content: space-around;
 list-style-type: none;
+padding-right: 2%;
 
 }
 
@@ -27,32 +32,30 @@ list-style-type: none;
 .page-header ul li a {
 
   font-size: 16px;
+  color: black;
+  font-weight: bold;
+    cursor: default;  
 }
+
+
+ a:hover {
+  text-decoration: underline;
+}
+
+.active{
+  text-decoration: underline;
+}
+
 
 .page-main {
 
   display: flex;
   flex-flow: column;
-  
   flex-grow: 1;
   min-height: 350px;
+  background: #f1f1f152;
 }
 
-
-.page-footer {
-
-display: flex;
-align-items: center;
-justify-content: space-between;
-margin-right: 10px;
-margin-left: 10px;
-
-}
-
-#profile {
-  display: flex;
-  flex-flow: column;
-}
 
 
 #profile {
@@ -72,45 +75,93 @@ margin-left: 10px;
   flex-flow: row  ;
 
 }
-#contact{
+ 
+.email{
+  padding: 0.5% 0% 0.5% 0%;
   display: flex;
-  flex-flow: column;
   align-items: center;
-  justify-content: space-around;
+  flex-flow: column;
+  
 }
 
-
-
-.contact-social-title{
-padding-right: 45px;
+.email >div{
+  margin: 10px 0px 10px 0px;
 }
-
-.email-all{
+.title-contact{
   display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: space-between
+  flex-flow: row;
+  justify-content: center;
+  padding-top: 4%;
 }
 
-.item-mail{
+.social{
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  padding: 5% 0% 1% 0%;
+}
+
+.icons{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.icons > li{
+
+  padding:0px 45px 0px 45px;
+
+
+}
+
+
+input {
+  padding: 15px;
+  width: 402px;
+  border: 1px solid #272525;
+  font-size: small;
+  
+}
+::placeholder { 
+  font-size: 14px ;
+  opacity: 1; 
+
+}
+
+textarea{
+  padding: 15px;
+  width: 402px;
+  resize: vertical;
+  font-size: small;
+  border: 1px solid #272525;
+}
+
+
+.button-send{
+  width: 434px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  font-size: small;
+  
+}
+
+
+
+
+
+
+
+
+.page-footer {
+
 display: flex;
-flex-flow: column;
-justify-content:space-around;
-
-}
-
-
-
-
-#contact > div{
-
-  padding-top: 20px;
-
-
-}
-
-.item-mail > *{
-
-  padding-top: 10px;
+align-items: center;
+justify-content: space-between;
+margin-right: 10px;
+margin-left: 10px;
+background: #f1f1f152;
 
 }

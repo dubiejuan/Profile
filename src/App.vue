@@ -4,30 +4,28 @@
    <nav>
     <ul >
       <li>
-          <a v-on:click="changeComponents('profile')">
+          <a  v-bind:class="[component.profile===true?'active':'']" v-on:click="changeComponents('profile')">
             Profile
           </a>
       
       </li>
       <li>    
-        <a v-on:click="changeComponents('experience')">
+        <a  v-bind:class="[component.experience===true?'active':'']" v-on:click="changeComponents('experience')">
                Experience
           </a>
       </li>
       <li>         
-        <a v-on:click="changeComponents('proyects')">
+        <a v-bind:class="[component.proyects===true?'active':'']" v-on:click="changeComponents('proyects')">
                Proyects
           </a>
       </li>
        <li> 
-          <a v-on:click="changeComponents('skills')">
+          <a  v-bind:class="[component.skills===true?'active':'']" v-on:click="changeComponents('skills')">
             Skills
           </a>
       </li>
       <li>  
-        <a v-on:click="changeComponents('info')">
-               Contact
-          </a>
+        <a v-bind:class="[component.info===true?'active':'']" v-on:click="changeComponents('info')">Info</a>
       </li>
     </ul>
   </nav>
@@ -95,6 +93,7 @@ export default {
     ]),
 
      changeComponents (data){
+
       this.change(data)
   }
 

@@ -1,19 +1,20 @@
 import Vue from 'vue'
 import App from './App.vue'
-import BootstrapVue from 'bootstrap-vue'
 import store from './store'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+import 'vue-awesome/icons'
+import Icon from 'vue-awesome/components/Icon'
 
-
-
-
-
+Vue.use(VueAxios, axios)
 Vue.config.productionTip = false
+Vue.component('v-icon', Icon)
 
-Vue.use(BootstrapVue)
+
+
 
 new Vue({
   store,
+  axios,
   render: h => h(App),
 }).$mount('#app')
