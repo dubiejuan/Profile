@@ -66,6 +66,7 @@ list-style-type: none;
 
 
 
+
 #profile {
   display: flex;
   flex-flow: column;
@@ -85,7 +86,97 @@ list-style-type: none;
 }
  
 
+/* Proyects */
+.proyects{
+margin:5%;
 
+}
+
+.proyects ul{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+   
+}
+
+
+.proyects ul li{
+  margin: 20px 0px 20px 0px;
+  list-style-type: none;
+}
+
+.proyect-info{
+  display: flex;
+  flex-flow: column;  
+}
+
+.proyect-info div{
+  margin: 15px;
+}
+
+.proyect-info div p {
+  font-size: 15px
+
+  
+}
+
+.proyect-info div  p span {
+  margin:0px 5px 0px 5px;
+}
+
+.middle {
+opacity: 0;
+width: 415px;
+height: 258px; 
+transition: .5s ease;
+position: relative;
+top: -102%;
+left: 0%;
+background: #e5e5ef;
+text-align: center;
+}
+
+.proyects-image:hover img {
+  opacity: 0.3;
+}
+
+.proyects-image:hover .middle {
+  opacity: 0.4;
+}
+
+
+.proyects-image img{
+  opacity: 1;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  }
+
+
+.proyects-image{
+margin: 10px 0px 10px 0px;
+width: 415px;
+height: 258px;  
+}
+
+
+/*Experiences*/
+
+
+
+#experiences{
+ display: flex;
+ flex-flow: row;
+ padding: 10px 10px 10px 10px
+
+}
+
+
+
+/*CONTACT*/
+.email >div{
+  margin: 10px 0px 10px 0px;
+}
 
 .email{
   padding: 0.5% 0% 0.5% 0%;
@@ -93,33 +184,6 @@ list-style-type: none;
   align-items: center;
   flex-flow: column;
   
-}
-
-.proyects{
-margin:5%;
-
-
-}
-
-
-.proyects ul{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-   
-}
-
-.proyects ul li div{
-margin-top: 30px;
-background: blue;
-width: 415px;
-height: 258px;  
-}
-
-
-/*CONTACT*/
-.email >div{
-  margin: 10px 0px 10px 0px;
 }
 .title-contact{
   display: flex;
@@ -193,7 +257,7 @@ textarea{
 
 
 
-
+/* Footer */
 
 .page-footer {
 

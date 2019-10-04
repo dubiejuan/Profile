@@ -2,8 +2,8 @@ const state = {
     componentsStates:{
         info:false,
         profile:false,
-        experience:false,
-        proyects:true,
+        experience:true,
+        proyects:false,
         skills:false
         }
   }
