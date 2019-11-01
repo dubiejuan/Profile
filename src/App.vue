@@ -34,7 +34,8 @@
   </nav>
   </header>
 
-  <main class="page-main">  
+  <main class="page-main">
+    <vue-canvas-nest :config="config" ></vue-canvas-nest>
     <div v-show="component.profile" >
     <Profile/>
     </div>
@@ -49,14 +50,11 @@
     </div>
     <div v-show="component.info">
     <Info/>
-    </div>
-  
+    </div> 
   </main>
-
-
   <footer class="page-footer">
      <small>© Copyright 2019. All rights reserved.</small>
-     <small>Create by: Juan Dubie</small>
+     <small>developed by Juan Dubie</small>
   </footer>
 </div>
   
@@ -69,6 +67,8 @@ import Info from './components/Info.vue'
 import Proyects from './components/Proyects.vue'
 import Skills from './components/Skills.vue'
 import { mapState, mapActions,mapMutations,mapGetters } from 'vuex'
+import vueCanvasNest from 'vue-canvas-nest'
+
 
 
 export default {
@@ -78,12 +78,17 @@ export default {
     Experience,
     Proyects,
     Skills,
-    Info
+    Info,
+    vueCanvasNest
   },
   data: () => {
     return {
-
-    
+    config: {
+         color: '0,0,0',
+          count: 350,
+          opacity: 1,
+          zIndex: -1
+      }
     }
     
 

@@ -1,82 +1,82 @@
 const state = {
-    componentsStates:{
-        info:false,
-        profile:false,
-        experience:true,
-        proyects:false,
-        skills:false
-        }
+  componentsStates: {
+    info: false,
+    profile: true,
+    experience: false,
+    proyects: false,
+    skills: false
   }
-  
-  // getters
-  const getters = {
-    components:state=>{
-        return state.componentsStates
-  }
-  }
+}
 
-  
-  // actions  api data
-  const actions = {
-
+// getters
+const getters = {
+  components: state => {
+    return state.componentsStates
   }
-  
-  // mutations
-  const mutations = {
-    change(state, component) {
-       switch(component){
-        case'profile':
-        state.componentsStates.profile=true
-        state.componentsStates.skills=false
-        state.componentsStates.info=false
-        state.componentsStates.proyects=false
-        state.componentsStates.experience=false
+}
+
+
+// actions  api data
+const actions = {
+
+}
+
+// mutations
+const mutations = {
+  change(state, component) {
+    switch (component) {
+      case 'profile':
+        state.componentsStates.profile = true
+        state.componentsStates.skills = false
+        state.componentsStates.info = false
+        state.componentsStates.proyects = false
+        state.componentsStates.experience = false
         break;
-        case'info':
-        state.componentsStates.profile=false
-        state.componentsStates.skills=false
-        state.componentsStates.info=true
-        state.componentsStates.proyects=false
-        state.componentsStates.experience=false
+      case 'info':
+        state.componentsStates.profile = false
+        state.componentsStates.skills = false
+        state.componentsStates.info = true
+        state.componentsStates.proyects = false
+        state.componentsStates.experience = false
         break
-        case'experience':
-        state.componentsStates.profile=false
-        state.componentsStates.skills=false
-        state.componentsStates.info=false
-        state.componentsStates.proyects=false
-        state.componentsStates.experience=true
+      case 'experience':
+        state.componentsStates.profile = false
+        state.componentsStates.skills = false
+        state.componentsStates.info = false
+        state.componentsStates.proyects = false
+        state.componentsStates.experience = true
         break
-        case'skills':
-        state.componentsStates.profile=false
-        state.componentsStates.skills=true
-        state.componentsStates.info=false
-        state.componentsStates.proyects=false
-        state.componentsStates.experience=false
+      case 'skills':
+        state.componentsStates.profile = false
+        state.componentsStates.skills = true
+        state.componentsStates.info = false
+        state.componentsStates.proyects = false
+        state.componentsStates.experience = false
         break
-         case'proyects':
-        state.componentsStates.profile=false
-        state.componentsStates.skills=false
-        state.componentsStates.info=false
-        state.componentsStates.proyects=true
-        state.componentsStates.experience=false
+      case 'proyects':
+        state.componentsStates.profile = false
+        state.componentsStates.skills = false
+        state.componentsStates.info = false
+        state.componentsStates.proyects = true
+        state.componentsStates.experience = false
         break
-        default:
-        state.componentsStates.profile=true
-        state.componentsStates.skills=false
-        state.componentsStates.info=false
-        state.componentsStates.proyects=false
-        state.componentsStates.experience=false
-      }
+      default:
+        state.componentsStates.profile = true
+        state.componentsStates.skills = false
+        state.componentsStates.info = false
+        state.componentsStates.proyects = false
+        state.componentsStates.experience = false
     }
-
-
   }
 
-  
-  export default {
-    namespaced: false,
-    state,
-    getters,
-    actions,
-    mutations
-  }
+
+}
+
+
+export default {
+  namespaced: false,
+  state,
+  getters,
+  actions,
+  mutations
+}

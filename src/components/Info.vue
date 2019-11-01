@@ -4,8 +4,11 @@
 <div class="title-contact">
 <p class="titles">Contact Me</p>  
 </div>
+<div v-show="mail.sent" class="email-succefull" >
+ <h3> Email sent succefull !  </h3>
 
-<div class="email" > 
+</div>
+<div   v-show="!mail.sent" class="email" > 
   <div>
     <input  v-model="mail.name" type="text"  placeholder="Name" > 
   </div>
@@ -18,8 +21,9 @@
     <p  v-show="error.message" class="errors"> Please fill in this required field.</p>
    </div>
    <div>
-   <button  class="button-send" v-on:click="sendData(mail)" :disabled=isDisabled >Send</button> 
+   <button class="button-send" v-on:click="formData()"  >Send</button> 
   </div>
+<modalView v-show="modal.isModalVisible"/>
 </div>
 <div class="social">
 <p class="titles">Social</p>  
@@ -35,7 +39,6 @@
            <v-icon name="brands/instagram" scale="2"></v-icon>  
            </a>
       </li>
-    
       <li>
         <a  style="color: black;" href="https://twitter.com/juan_dubie" target="_blank">
            <v-icon name="brands/twitter-square" scale="2"></v-icon>
@@ -55,12 +58,12 @@
 <script>
 
 import { mapState, mapActions,mapMutations,mapGetters } from 'vuex'
-
+import modalView from './Modal'
 
 export default {
   name: 'Info',
-  props: {
-    
+  components: {
+    modalView
   },
   data:()=>{
       return {
@@ -68,13 +71,12 @@ export default {
         message:false,
         email:false
       },
-      validated:false
+      validated:false,
       }
   },
   methods:{
-
-     ...mapActions([
-      'sendEmail'
+      ...mapMutations([
+      'openModalVuex',
     ]),
 
      checkData(){
@@ -87,7 +89,6 @@ export default {
       }else{
       this.error.email=false 
     }
-
     if(this.mail.message.length>=1){
       this.error.message=false
     }else{
@@ -96,33 +97,22 @@ export default {
     }
     return true
     },
-
-  async sendData(mailParams){
+  async formData(){
     if(this.checkData() === true){
-    this.validated=true;
-  try{
-    let response =  await this.sendEmail(mailParams)
-    console.log('response',response)
-  }catch(error){
-    console.log('error',error)
-  }
-    this.validated=false;
-    }
+      this.openModalVuex()
+    }  
   },
    validEmail(email) {
-      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      console.log(re.test(email))
-      return re.test(email);
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ 
+      return re.test(email)
     }
 
   },
   computed:{
  ...mapGetters({
-     mail: 'mail'
-  }),
-   isDisabled() {
-    return this.validated;
-  }
+     mail: 'mail',
+     modal:'modal'
+  })
 
   }
 }
