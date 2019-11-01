@@ -411,7 +411,7 @@ flex-flow: row;
 }
 .modal-close{
   align-self: flex-end;
-  margin-right: 5px;
+  margin-right: 14px;
 }
 /*
 .modal-footer {
