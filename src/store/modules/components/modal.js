@@ -2,7 +2,8 @@
  const state = {
 
     modal:{
-        isModalVisible:false
+        isModalVisible:false,
+      
     }
 
   }
@@ -26,6 +27,7 @@
     },
     closeModalVuex(){
         state.modal.isModalVisible=false;
+       
     }
  
   }

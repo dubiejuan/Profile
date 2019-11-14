@@ -2,15 +2,15 @@
 <div class="proyects">
 <ul>
 <li>
-  <div class="proyects-image"> 
-    <img width="415" height="258"  src=" /images/ejemplo.jpeg"> 
-  <div class="middle">
-    <div class="proyect-info">
-    <div>
+   <div class="proyects-name">
       <h3>
        Donde lo veo
       </h3>
     </div>
+  <div class="proyects-image"> 
+    <img width="415" height="258"  src="/images/dondeloveo.png"> 
+  <div class="middle">
+    <div class="proyect-info">
      <div>
       <h4>
        About
@@ -35,15 +35,16 @@
   </div>
   </div>
 </li>
-<li><div class="proyects-image">  
-   <img width="415" height="258"  src=" /images/ejemplo.jpeg"> 
-  <div class="middle">
-  <div class="proyect-info">
-    <div>
+<li>
+  <div class="proyects-name">
       <h3>
-       Deportes Corrientes
+        Deportes Corrientes
       </h3>
     </div>
+  <div class="proyects-image">  
+   <img width="415" height="258"  src="/images/deportes.jpeg"> 
+  <div class="middle">
+  <div class="proyect-info">
      <div>
       <h4>
        About
@@ -67,16 +68,17 @@
   </div>
   </div>
 </li>
-<li><div class="proyects-image"> 
-  <img width="415" height="258"  src=" /images/ejemplo.jpeg"> 
-  <div class="middle">
-       <div class="proyect-info">
-    <div>
+<li>
+    <div class="proyects-name">
       <h3>
-      Banco Tucuman
+      Banco Macro Tucuman
       </h3>
     </div>
-     <div>
+  <div class="proyects-image"> 
+  <img width="415" height="258"  src="/images/macro.png"> 
+  <div class="middle">
+    <div class="proyect-info">
+      <div>
       <h4>
        About
       </h4>
@@ -100,15 +102,15 @@
   </div>
 </li>
 <li>
-  <div class="proyects-image">
-    <img width="415" height="258"  src=" /images/ejemplo.jpeg"> 
-  <div class="middle">
-        <div class="proyect-info">
-    <div>
+  <div class="proyects-name">
       <h3>
-     Cultural Corrientes
+      Cultura Corrientes
       </h3>
     </div>
+  <div class="proyects-image">
+    <img width="415" height="258"  src=" /images/agenda.jpeg"> 
+  <div class="middle">
+        <div class="proyect-info">
      <div>
       <h4>
        About
@@ -132,15 +134,16 @@
   </div>
   </div>
 </li>
-<li><div class="proyects-image">
-   <img width="415" height="258"  src=" /images/ejemplo.jpeg"> 
-  <div class="middle">
-        <div class="proyect-info">
-    <div>
+<li>
+  <div class="proyects-name">
       <h3>
       Central de ofertas
       </h3>
     </div>
+  <div class="proyects-image">
+   <img width="415" height="258"  src=" /images/cdo.png"> 
+  <div class="middle">
+        <div class="proyect-info">
      <div>
       <h4>
        About
@@ -166,16 +169,16 @@
   </div>
 </li>
 <li>
- 
-<div class="proyects-image">
-    <img width="415" height="258"  src=" /images/ejemplo.jpeg"> 
-  <div class="middle">
-       <div class="proyect-info">
-    <div>
+ <div class="proyects-name">
       <h3>
-      Turismo Corrientes
+       Turismo Corrientes
       </h3>
     </div>
+<div class="proyects-image">
+    <img width="415" height="258"  src="/images/turismo.jpeg"> 
+  <div class="middle">
+       <div class="proyect-info">
+  
      <div>
       <h4>
        About
@@ -206,8 +209,5 @@
 <script>
 export default {
   name: 'Proyects',
-  props: {
-    msg: String
-  }
 }
 </script>

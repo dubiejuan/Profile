@@ -36,19 +36,19 @@
 
   <main class="page-main">
     <vue-canvas-nest :config="config" ></vue-canvas-nest>
-    <div v-show="component.profile" >
+    <div  class="all-components" v-show="component.profile" >
     <Profile/>
     </div>
-    <div v-show="component.experience" >
+    <div class="all-components" v-show="component.experience" >
     <Experience/>
     </div>
-    <div v-show="component.skills" >
+    <div class="all-components" v-if="component.skills" >
     <Skills/>
     </div>
-    <div v-show="component.proyects" >
+    <div class="all-components" v-show="component.proyects" >
     <Proyects/>
     </div>
-    <div v-show="component.info">
+    <div class="all-components" v-show="component.info">
     <Info/>
     </div> 
   </main>

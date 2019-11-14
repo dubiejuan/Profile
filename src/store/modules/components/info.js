@@ -25,7 +25,7 @@
 
           try{
           
-          let response =await axios.post('http://localhost:3001/mail/send-email', { data:data.state.mail})
+          let response =await axios.post('http://localhost:5000/mail/send-email', { data:data.state.mail})
           
           console.log(response)
 

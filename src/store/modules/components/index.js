@@ -1,10 +1,10 @@
 const state = {
   componentsStates: {
     info: false,
-    profile: true,
+    profile: false,
     experience: false,
     proyects: false,
-    skills: false
+    skills: true
   }
 }
 

@@ -4,11 +4,8 @@
 <div class="title-contact">
 <p class="titles">Contact Me</p>  
 </div>
-<div v-show="mail.sent" class="email-succefull" >
- <h3> Email sent succefull !  </h3>
 
-</div>
-<div   v-show="!mail.sent" class="email" > 
+<div    class="email" > 
   <div>
     <input  v-model="mail.name" type="text"  placeholder="Name" > 
   </div>

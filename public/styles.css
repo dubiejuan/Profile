@@ -8,6 +8,11 @@ body {
   margin: 0px;
 }
 
+.all-components{
+  flex: 1;
+}
+
+
 
 .wrapper {
   display: flex;
@@ -71,7 +76,7 @@ a:hover {
 
 #profile {
   display: flex;
-  flex-flow: column;
+  flex-flow: row;
 }
 
 
@@ -85,10 +90,13 @@ a:hover {
   margin-left: 100px;
   margin-bottom: 50px;
 }
+.profile-title p{
+font-size: 30px;
+font-weight: bold;
+}
 
 .profile-art{
   align-self: flex-start;
-  margin: 10px;
   width: 800px;
   display: flex;
   flex-flow: column wrap; 
@@ -103,9 +111,17 @@ a:hover {
 
 }
 
-.profile-image {
-  margin: 0px 100px 0px 250px;
+.profile-image-container {
+  width: 100%;
+ display: flex;
+ flex-flow: row;
+ justify-content: center;
+ align-items: center;
+}
 
+.profile-body{
+  display: flex;
+  flex-flow: column;
 }
 
 .profile-div {
@@ -129,6 +145,25 @@ a:hover {
   list-style-type: none;
 }
 
+.profile-wisdom{
+margin-top: 130px;
+text-align: center;
+
+}
+
+.profile-wisdom-p-text{
+  font-size: 30px;
+  font-family: 'Share Tech Mono', monospace;
+
+  
+}
+
+.profile-wisdom-p-author{
+  margin-top: 10px;
+  font-size: 16px;
+  font-family: 'Share Tech Mono', monospace;
+  
+}
 
 
 /* Proyects */
@@ -151,9 +186,16 @@ a:hover {
   list-style-type: none;
 }
 
+.proyects-name {
+
+ text-align: center; 
+}
+
 .proyect-info {
+  height: inherit;
   display: flex;
   flex-flow: column;
+  justify-content: center;
 }
 
 .proyect-info div {
@@ -174,7 +216,7 @@ a:hover {
   height: 258px;
   transition: .5s ease;
   position: relative;
-  top: -102%;
+  top: -101%;
   left: 0%;
   background: #e5e5ef;
   text-align: center;
@@ -243,6 +285,72 @@ a:hover {
 .exp-section div span{
  display: block;
 }
+
+#skills{
+margin: 5%;
+}
+
+
+.skills-container{
+
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  
+  margin:10px;
+
+}
+.image-lag{
+  vertical-align: bottom
+}
+.each-skill{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+}
+.skill-name{
+ text-align: left;
+ width:100%;
+ position: absolute;
+ padding-top: 5px;
+ padding-left: 8px;
+}
+
+.skill-porcent{
+  text-align: right;
+  width:100%;
+  position: absolute;
+  padding-top: 5px;
+  padding-right: 2px;
+ }
+
+.loading-bar {
+  position: relative;
+  width: 400px;
+  height: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #77747436;
+}
+  .percentage {
+    height: 100%;
+    border-radius: 15px;
+    background-color: grey;
+  
+  } 
+
+
+
+@keyframes animate-stripes {
+  0% { background-position: 0 0; }
+  100% { background-position: 60px 0; }
+}
+
+
+
+
 
 
 
@@ -427,7 +535,15 @@ flex-flow: row;
   flex-flow: row;
   justify-content: center;
 } 
-
+.modal-body-sent {
+align-items: center;
+flex: 1;
+position: relative;
+display: flex;
+padding: 20px 10px;
+flex-flow: row;
+justify-content: center;
+} 
 .divider {
   margin: 0px 10px 0px 10px;
 }
@@ -447,4 +563,29 @@ flex-flow: row;
   background: #4AAE9B;
   border: 1px solid #4AAE9B;
   border-radius: 2px;
+}
+
+
+
+.typewriter  {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+ 
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 80% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
 }
