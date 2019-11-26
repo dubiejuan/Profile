@@ -1,9 +1,9 @@
 const state = {
   componentsStates: {
     info: false,
-    profile: false,
+    profile: true,
     experience: false,
-    proyects: true,
+    proyects: false,
     skills: false
   }
 }

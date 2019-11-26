@@ -740,7 +740,7 @@ justify-content: center;
 /* The typing effect */
 @keyframes typing {
   from { width: 0 }
-  to { width: 80% }
+  to { width: 95% }
 }
 
 /* The typewriter cursor effect */
@@ -752,7 +752,7 @@ justify-content: center;
 
 /*Mobile*/
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 700px){
 
   .page-footer {
     display: flex;
@@ -1129,6 +1129,17 @@ animation: bounceOutUp .5s;
   }
 }
 
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
 
 
 }

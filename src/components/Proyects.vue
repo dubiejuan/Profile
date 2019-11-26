@@ -163,14 +163,14 @@ methods:{
 
    handleResize() {
       this.window.width = window.innerWidth;
-       this.window.flag = this.window.width <= 600 ? true:false
+       this.window.flag = this.window.width <= 700 ? true:false
       
     }
 
   },
   computed: {
        filtered_proyects(){
-            if(this.window.width <= 600 ){
+            if(this.window.width <= 700 ){
             return this.proyects.slice(this.filter.start ,this.filter.limit )
             }else{
              return this.proyects
