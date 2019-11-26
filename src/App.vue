@@ -2,9 +2,9 @@
 <div class="wrapper">
   <header class="page-header">
    <nav>
-     <h2 class="logo">
-      LOGO
-    </h2>
+     <div class="logo-container">
+          <img src="../public/images/logo.png" >
+     </div>
     <ul >
       <li>
           <a  v-bind:class="[component.profile===true?'active':'']" v-on:click="changeComponents('profile')">
@@ -34,23 +34,37 @@
   </nav>
   </header>
 
-  <main class="page-main">
-    <vue-canvas-nest :config="config" ></vue-canvas-nest>
-    <div  class="all-components" v-show="component.profile" >
+  <main   class="page-main">
+     <!-- <div class="pc-canvas" >
+       <vue-canvas-nest  :config="{color: '0,0,0',count: 250,opacity: 1, zIndex: -1}" ></vue-canvas-nest>
+     </div> -->
+     
+      <!-- <div class="mobile-canvas">
+        mobile
+        <vue-canvas-nest   :config="{color: '0,0,0',count: 250,opacity: 1, zIndex: -1}" ></vue-canvas-nest> 
+      </div>  -->
+     
+ 
+   <div  class="all-components" v-show="component.profile" >
     <Profile/>
+    </div> 
+
+     <div class="all-components" v-show="component.experience" >
+     <Experience/>
     </div>
-    <div class="all-components" v-show="component.experience" >
-    <Experience/>
-    </div>
-    <div class="all-components" v-if="component.skills" >
-    <Skills/>
-    </div>
-    <div class="all-components" v-show="component.proyects" >
+
+      <div class="all-components" v-if="component.proyects" >
     <Proyects/>
     </div>
+    
+     <div class="all-components" v-if="component.skills" >
+    <Skills/>
+    </div>
+
     <div class="all-components" v-show="component.info">
     <Info/>
-    </div> 
+    </div>    
+
   </main>
   <footer class="page-footer">
      <small>© Copyright 2019. All rights reserved.</small>
@@ -81,17 +95,11 @@ export default {
     Info,
     vueCanvasNest
   },
+
   data: () => {
     return {
-    config: {
-         color: '0,0,0',
-          count: 350,
-          opacity: 1,
-          zIndex: -1
-      }
+      flag :false
     }
-    
-
     
   },
   methods:{
@@ -102,7 +110,9 @@ export default {
 
      changeComponents (data){
       this.change(data)
-  }
+  },
+
+ 
 
   },
   computed:{

@@ -3,8 +3,8 @@ const state = {
     info: false,
     profile: false,
     experience: false,
-    proyects: false,
-    skills: true
+    proyects: true,
+    skills: false
   }
 }
 

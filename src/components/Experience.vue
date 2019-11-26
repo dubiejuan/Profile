@@ -1,71 +1,268 @@
 <template>
-  <div id="experiences">
+    <div class="exp-component">
     <div class="exp-section">
-      <h3>EDUCATION</h3>
-      <div>
-        <div>
-          <h4>Curso online @udemy </h4>
-          <p><span>-Machine learning tensorlow </span></p>
-          <p><span>-Serveless </span></p>
+      <p class="section-title">EDUCATION</p>
+      <ul class="section-education">
+        <li v-for="item in education" v-bind:key="item.id">
+          <div>
+          <p class="titles"> {{item.name}} </p>
+          <span  class="stacks" v-for="type in item.types" v-bind:key="type.id">{{type.name}}</span>
         </div>
-        <div>
-          <h4>CURSO DE CAPACITACIÓN @ Educación IT </h4>
-          <p><span>-JavaScript </span></p>
-          <p><span>-Node JS </span></p>
-          <p><span>-Mongo DB </span></p>
-        </div>
-        <div>
-          <h4>LIC. EN GESTIÓN DE TECNOLOGÍA DE LA INFORMACIÓN @ UADE </h4>
-          <p><span>-2015 - </span></p>
-        </div>
-        <div>
-          <h4>TÍTULO SECUNDARIO @ All Saints’ School </h4>
-          <p><span>-Bachiller Internacional (IB) </span></p>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
-    <div class="line-separator"></div>
+   
     <div class="exp-section">
-      <h3>CAREER</h3>
-      <div>
-        <div>
-          <h4>FULLSTACK WEB DEVELOPER @ BP4</h4>
-          <p><span>-Desarrollo y mantenimiento del proyecto ‘Banco de Tucumán’</span></p>
-          <p><span>- Desarrollo de paquetes (ISS),
-              Store Procedure </span></p>
-          <p><span>- Capacitación</span></p>
-          <p><span>- Stack: Back-end (Node JS)</span></p>
-          <p><span>-Front-end(AngularJS, HTML5, Materialize, CSS),
-              Source control (GIT)</span></p>
-          <p><span>-Base de datos SQL-Server </span></p>
-          <p><span>-Metodologías ágiles JIRA</span></p>
+      <p class="section-title">CAREER</p>
+     <ul class="section-career">
+        <li v-for="data in career">
+          <div>
+          <p class="titles"> {{data.name}} </p>
+          <span class="activity"  v-for="activity in data.activity" v-bind:key="activity.id">{{activity.name}}</span>
+          <p class="stack-title">Stacks:</p>
+          <span  class="stacks"  v-for="stacks in data.stacks" >{{stacks.type}}:&nbsp;{{stacks.name}}</span>
         </div>
-        <div>
-          <h4>FULLSTACK WEB DEVELOPER @ Grava Digital & Appterix</h4>
-          <p><span>- Desarrollo y mantenimiento de APIS y páginas web </span></p>
-          <p><span>- Administración y mantenimiento de proyectosen servidores</span></p>
-          <p><span>- Stack: Back-end (Node JS)</span></p>
-          <p><span>Front-end (AngularJS, HTML5, Materialize, CSS) </span></p>
-          <p><span>Source control (GIT) </span></p>
-        </div>
-        <div>
-          <h4>FULLSTACK WEB DEVELOPER @ Central de ofertas </h4>
-          <p><span>-Desarrollo y mantenimiento de Proyectos 'CRM' y 'APIS'</span></p>
-          <p><span>-Revision y mantenimiento de scripts existentes</span></p>
-           <p><span>-Desarrollo y documentacion base de codigo y arquitecturas</span></p>
-           <p><span>-Desarrollo e implementacion de soluciones para el usuario</span></p>
-            <p><span>-Stack: Back-end (Node JS,Express,Sails JS)</span></p>
-          <p><span>Front-end (HTML5, Vue JS, Bootstrap,Backbone JS, CSS) </span></p>
-          <p><span>Base de datos (MySQL) </span></p>
-          <p><span>Source control (GitLab) </span></p>
-          <p><span>Cloud (aws) </span></p>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
   </div>
+
+  
 </template>
 <script>
   export default {
     name: 'Experience',
+    data:()=>{
+      return {
+
+        education:[
+           {
+           id:1,
+            name:'Online course @udemy',
+            types:[
+              {
+              id:1,
+              name:'Machine learning tensorlow'},
+              {
+              id:2,
+              name:'Serveless'
+              }
+            ]
+          },
+          {
+            id:2,
+            name:'TRAINING COURSE @ Educación IT ',
+            types:[
+              {
+              id:1,
+              name:'JavaScript'
+              },
+              {
+              id:2,
+              name:'PHP'
+              },
+               {
+              id:3,
+              name:' Node JS'
+              },
+              {
+              id:4,
+              name:'Mongo DB'
+              }
+            ]
+          },
+           {
+           id:3,
+            name:'LIC. EN GESTIÓN DE TECNOLOGÍA DE LA INFORMACIÓN @ UADE',
+            types:[
+              {
+              id:1,
+              name:'2015 - Now'},
+            ]
+          },
+          {
+           id:4,
+            name:'Bachelor Degree @ All Saints’ School',
+            types:[
+              {
+              id:1,
+              name:'International Bachelor (IB)'},
+            ]
+          }
+        ],
+
+        career:[
+           {
+           id:1,
+            name:'FULLSTACK WEB DEVELOPER @ Grava Digital & Appterix',
+             stacks:[
+                {id:1,
+                name:"AngularJS, HTML5, Materialize, CSS",
+                type:'Front-End'
+                },
+                {id:2,
+                name:"NodeJS,ExpressJS,MySQL,MongoDB",
+                type:'Back-End'
+                },
+                {
+                  id:3,
+                  name:'GitLab',
+                  type:'Source',
+                },
+                {
+                  id:4,
+                  name:'GitLab Agile',
+                  type:'Agile',
+                },
+                 {
+                  id:5,
+                  name:'Digital Ocean',
+                  type:'Cloud',
+                },
+                {
+                  id:6,
+                  name:'Linux',
+                  type:'OS',
+                }
+             ],
+            activity:[
+              {
+              id:1,
+              name:'APIS & WEB pages development and maintenance'
+                },
+                {
+                  id:2,
+                  name:'Database architecture'
+                },
+                {
+                  id:3,
+                  name:'Server maintenance'
+                }
+            ]
+               
+            
+          },
+          {
+           id:2,
+            name:'FULLSTACK WEB DEVELOPER @ BP4',
+             stacks:[
+                {id:1,
+                name:"AngularJS, HTML5, Material, CSS",
+                type:'Front-End'
+                },
+                {id:2,
+                name:"NodeJS,SQL-SERVER,ExpressJS",
+                type:'Back-End'
+                },
+                {
+                  id:3,
+                  name:'Atlassian Git',
+                  type:'Source',
+                },
+                {
+                  id:4,
+                  name:'Jyra',
+                  type:'Agile',
+                },
+                 {
+                  id:5,
+                  name:'Windows Server',
+                  type:'Cloud',
+                },
+                {
+                  id:6,
+                  name:'Windows',
+                  type:'OS',
+                }
+
+             ],
+            activity:[
+              {
+              id:1,
+              name:'BANCO DE TUCUMAN(CRM) development and maintenance'
+                },
+                {
+                  id:2,
+                  name:'(ISS) package development'
+                },
+                {
+                  id:3,
+                  name:'Store Procedure development'
+                },
+                {
+                  id:4,
+                  name:'Training Workshop'
+                }
+            ]
+               
+            
+          },
+          {
+           id:2,
+            name:'FULLSTACK WEB DEVELOPER @ Central de ofertas',
+             stacks:[
+                {id:1,
+                name:"HTML5, VueJS, Bootstrap,BackboneJS, CSS",
+                type:'Front-End'
+                },
+                {id:2,
+                name:"NodeJS,ExpressJS,SailsJS,MySQL",
+                type:'Back-End'
+                },
+              {
+                  id:3,
+                  name:'GitLab',
+                  type:'Source',
+                },
+                {
+                  id:4,
+                  name:'GitLab Agile,ClickUp',
+                  type:'Agile',
+                },
+                {
+                  id:4,
+                  name:'GitLab Agile,ClickUp',
+                  type:'Agile',
+                },
+                 {
+                  id:5,
+                  name:'AWS',
+                  type:'Cloud',
+                },
+                {
+                  id:6,
+                  name:'Linux',
+                  type:'OS',
+                }
+             ],
+            activity:[
+              {
+              id:1,
+              name:'APIS & CRM development and maintenance'
+                },
+                {
+                 id:2,
+                 name:"APIS's integration"
+                },
+                {
+                  id:3,
+                  name:'Scripts  review , maintenance and development'
+                },
+                {
+                  id:4,
+                  name:'Code base & Arquitecture development and documentation'
+                },
+                {
+                  id:5,
+                  name:'Usuario solutions development and implementation '
+                }
+            ]
+               
+            
+          }
+        ]
+
+      }
+    }
   }
 </script>

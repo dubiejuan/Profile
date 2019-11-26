@@ -1,11 +1,9 @@
 <template>
-
 <div id="contact">
 <div class="title-contact">
-<p class="titles">Contact Me</p>  
+<p class="titles-me">Contact Me</p>  
 </div>
-
-<div    class="email" > 
+<div  class="email" > 
   <div>
     <input  v-model="mail.name" type="text"  placeholder="Name" > 
   </div>
@@ -28,7 +26,7 @@
 <ul class="icons">
       <li>
       <a style="color: black;" href="https://www.linkedin.com/in/juan-dubie-060708132" target="_blank">
-    <v-icon name="brands/linkedin" scale="2"></v-icon>
+     <v-icon name="brands/linkedin" scale="2"></v-icon>
       </a>
       </li>
       <li>
@@ -48,8 +46,6 @@
       </li>
 </ul>
 </div>
-
-
 </template>
 
 <script>
