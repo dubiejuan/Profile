@@ -801,6 +801,12 @@ justify-content: center;
   display: flex;
   align-items: center;
   }
+
+  .profile-wisdom{
+    margin-top: 50px;
+    text-align: center;
+    
+    }
   
   } 
   
@@ -1203,6 +1209,11 @@ animation: bounceOutUp .5s;
     font-family: 'Share Tech Mono', monospace;
 }
 
+.profile-wisdom{
+  margin-top: 50px;
+  text-align: center;
+  
+  }
 
 }  
 
