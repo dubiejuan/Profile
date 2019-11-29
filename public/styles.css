@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -536,23 +537,17 @@ margin-left: 10px;
 
 
 .title-contact {
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
   margin-bottom: 20px;
+  padding-top: 30px;
 }
 
 .titles-me {
   font-size: 20px;
   font-weight: bolder;
-  margin-bottom: 4px;
 }
 
 .social {
-  display: flex;
-  flex-flow: row;
-  justify-content: center;
-  padding: 5% 0% 1% 0%;
+    padding: 5% 0% 2% 0%
 }
 
 .icons {
@@ -615,13 +610,9 @@ textarea {
 
 
 .send-arquitecture{
-
 display: flex;
 flex-flow: row;
-
-
 }
-
 
 .errors {
   color: red;
@@ -680,12 +671,9 @@ flex-flow: row;
   align-self: flex-end;
   margin-right: 14px;
 }
-/*
-.modal-footer {
-  border-top: 1px solid #eeeeee;
-  justify-content: flex-end;
-}
-*/
+
+
+
 .modal-body {
   flex:1;
   position: relative;
@@ -725,7 +713,6 @@ justify-content: center;
 }
 
 
-
 .typewriter  {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid orange; /* The typwriter cursor */
@@ -750,9 +737,75 @@ justify-content: center;
 }
 
 
+
+
 /*Mobile*/
 
-@media only screen and (max-width: 700px){
+
+@media only screen and (max-width:1024px) and (min-width:770px){
+
+  
+
+  .no-mobile {
+      all: unset;
+      padding-top: 30px;
+  }
+  
+  
+  
+  #profile {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  
+  }
+  
+  
+  .profile-body {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+  }
+  .profile-title {
+    all: unset;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+  }
+  .profile-div{
+  all: unset;
+  }
+  
+  .profile-art article {
+    margin: 50px;
+  }
+  
+  .profile-art article h3{
+    font-size: 22px;
+    text-align: center;
+  }
+
+  
+  .resume {
+    font-size: 20px;
+  }
+  
+  .profile-wisdom-p-text {
+      font-size: 28px;
+      font-family: 'Share Tech Mono', monospace;
+  }
+  
+  
+  .all-components{
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  }
+  
+  } 
+  
+
+ @media only screen and (max-width: 768px) and (min-width:0px){
 
   .page-footer {
     display: flex;
@@ -1135,11 +1188,21 @@ animation: bounceOutUp .5s;
   to { width: 100% }
 }
 
-/* The typewriter cursor effect */
+
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: orange }
 }
 
-
+.resume {
+  font-size: 20px;
 }
+
+.profile-wisdom-p-text {
+    font-size: 18px;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+
+}  
+

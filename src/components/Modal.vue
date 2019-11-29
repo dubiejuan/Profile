@@ -24,7 +24,7 @@
     <button  class="button-send-type"   v-on:click="sendData(2)" >Graph</button>  
         </section>
         <section v-show="emailsent" class="modal-body-sent">
-          Email Sent Succefull ! 
+          Email Sent Successfully ! 
         </section>
         
         <footer>
@@ -36,7 +36,7 @@
 </template>
 
 <script>
-//import { mapState, mapActions,mapMutations,mapGetters } from 'vuex'
+
 import {   mapActions,mapMutations,mapGetters } from 'vuex'
 export default {
   name: 'Modal',

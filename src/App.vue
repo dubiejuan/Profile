@@ -49,7 +49,7 @@
     <Profile/>
     </div> 
 
-     <div class="all-components" v-show="component.experience" >
+     <!-- <div class="all-components" v-show="component.experience" >
      <Experience/>
     </div>
 
@@ -59,7 +59,7 @@
     
      <div class="all-components" v-if="component.skills" >
     <Skills/>
-    </div>
+    </div> -->
 
     <div class="all-components" v-show="component.info">
     <Info/>

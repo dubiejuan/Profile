@@ -25,7 +25,7 @@
 
           try{
           
-          let response =await axios.post('http://localhost:5000/mail/send-email', { data:data.state.mail})
+          let response =await axios.post('/api/mail/send-email', { data:data.state.mail})
           
           console.log(response)
 
@@ -51,17 +51,21 @@
 
   async sendEmailGraphql (data) {
 
+  let queryData=`mutation {
+      createEmail(emailInput:{name:"${state.mail.name}",email:"${state.mail.email}",message:"${state.mail.message}"}){
+        _id
+      }
+    }`
+
 try{
 
 let response =await axios
-.post('http://localhost:5000/graphql', {
-  query: `mutation {
-      createEmail(emailInput:{name:"juancho",email:"dubiejuan@gmail.com",message:"asfsf"}){
-        _id
-      }
-    }
-  `,
+.post('/api/graphql', {
+  query: queryData,
 })
+
+
+
 console.log(response)
 
 
@@ -98,3 +102,10 @@ return error
     actions,
     mutations
   }
+
+
+
+
+ 
+
+ 
