@@ -55,11 +55,11 @@
 
       <!-- <div class="all-components" v-if="component.proyects" >
     <Proyects/>
-    </div>
+    </div> -->
     
      <div class="all-components" v-if="component.skills" >
     <Skills/>
-    </div>  -->
+    </div> 
 
     <div class="all-components" v-show="component.info">
     <Info/>
