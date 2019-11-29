@@ -143,11 +143,7 @@ a:hover {
   display: flex;
   flex-flow: row;
   align-items: center;
-  /* flex: 1; */
-  /* justify-content: flex-start; */
-  /* margin-top: 100px; */
-  margin-left: 100px;
-  /* margin-bottom: 50px;*/
+ 
 
 }
 .profile-title p{
@@ -155,12 +151,7 @@ a:hover {
   font-weight: bold; 
 }
 
-.profile-art{
- /* align-self: flex-start;
-  width: 800px;
-  display: flex;
-  flex-flow: column wrap;  */
-}
+
  .profile-art article{
    /* margin-bottom: 200px; */
  
@@ -717,7 +708,7 @@ justify-content: center;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid orange; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
- 
+  margin-left: 100px;
   letter-spacing: .15em; /* Adjust as needed */
   animation: 
     typing 3.5s steps(30, end),
@@ -727,7 +718,7 @@ justify-content: center;
 /* The typing effect */
 @keyframes typing {
   from { width: 0 }
-  to { width: 95% }
+  to { width: 75% }
 }
 
 /* The typewriter cursor effect */
@@ -737,6 +728,9 @@ justify-content: center;
 }
 
 
+.btn-2:hover,.btn-2:focus,.btn-2:active {
+  text-decoration: underline;
+}
 
 
 /*Mobile*/
@@ -744,7 +738,26 @@ justify-content: center;
 
 @media only screen and (max-width:1024px) and (min-width:770px){
 
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
   
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
+  .typewriter  {
+    margin-left: 0px;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
 
   .no-mobile {
       all: unset;
@@ -813,6 +826,27 @@ justify-content: center;
 
  @media only screen and (max-width: 768px) and (min-width:0px){
 
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
+  
+  .typewriter  {
+    margin-left: 0px;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
   .page-footer {
     display: flex;
     align-items: center;
@@ -970,12 +1004,13 @@ justify-content: center;
 
   
   .exp-section {
+    margin: 5px;
     flex: 1;
-    margin: 5px 0px 0px 30px;
     display: flex;
     flex-flow: column wrap;
     font-size: 10px;
     padding: 0%;
+    
 }
 
 .exp-section div {
@@ -989,6 +1024,7 @@ justify-content: center;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
+  align-items: center;
 }
 
 
