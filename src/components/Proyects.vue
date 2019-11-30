@@ -1,5 +1,5 @@
 <template>
-<div class="proyects">
+<div id="proyects">
 <ul>
 <transition-group  v-if="window.flag"  name="bounce">
  <li  v-for="item in filtered_proyects" v-bind:key="item.id">

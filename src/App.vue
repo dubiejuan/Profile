@@ -6,29 +6,22 @@
           <img src="../public/images/logo.png" >
      </div>
     <ul >
-      <li>
-          <a  v-bind:class="[component.profile===true?'active':'']" v-on:click="changeComponents('profile')">
-            Profile
-          </a>
-      
+      <li>  
+           <router-link  v-bind:class="[component.profile===true?'active':'']" to="/profile" v-on:click="changeComponents('profile')" > Profile</router-link>  
       </li>
-      <li>    
-        <a  v-bind:class="[component.experience===true?'active':'']" v-on:click="changeComponents('experience')">
-               Experience
-          </a>
+      <li> 
+         <router-link  v-bind:class="[component.experience===true?'active':'']" to="/experience" v-on:click="changeComponents('experience')" > Experience</router-link>       
+
       </li>
-      <li>         
-        <a v-bind:class="[component.proyects===true?'active':'']" v-on:click="changeComponents('proyects')">
-               Proyects
-          </a>
+      <li> 
+         <router-link  v-bind:class="[component.proyects===true?'active':'']" to="/proyects" v-on:click="changeComponents('proyects')" >Proyects</router-link>            
       </li>
        <li> 
-          <a  v-bind:class="[component.skills===true?'active':'']" v-on:click="changeComponents('skills')">
-            Skills
-          </a>
+          <router-link  v-bind:class="[component.skills===true?'active':'']" to="/skills" v-on:click="changeComponents('skills')" > Skills</router-link>    
+
       </li>
-      <li>  
-        <a v-bind:class="[component.info===true?'active':'']" v-on:click="changeComponents('info')">Contact</a>
+      <li> 
+         <router-link v-bind:class="[component.info===true?'active':'']"  to="/contact" v-on:click="changeComponents('info')" > Contact</router-link>     
       </li>
     </ul>
   </nav>
@@ -44,27 +37,13 @@
         <vue-canvas-nest   :config="{color: '0,0,0',count: 250,opacity: 1, zIndex: -1}" ></vue-canvas-nest> 
       </div>  -->
      
- 
-   <div  class="all-components" v-show="component.profile" >
-    <Profile/>
-    </div> 
-
-    <div class="all-components" v-show="component.experience" >
-     <Experience/>
-    </div>
-
-      <!-- <div class="all-components" v-if="component.proyects" >
-    <Proyects/>
-    </div> -->
-    
-     <div class="all-components" v-if="component.skills" >
-    <Skills/>
-    </div> 
-
-    <div class="all-components" v-show="component.info">
-    <Info/>
-    </div>    
-
+      <Profile class="all-components" />
+     <Experience class="all-components" />
+     <Proyects class="all-components" />
+     <Skills class="all-components" />
+     <Info class="all-components"/>
+  
+     
   </main>
   <footer class="page-footer">
      <small>© Copyright 2019. All rights reserved.</small>
@@ -112,7 +91,6 @@ export default {
       this.change(data)
   },
 
- 
 
   },
   computed:{

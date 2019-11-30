@@ -1,5 +1,4 @@
 <template>
-
   <div id="profile">
     <div class="no-mobile">
     <div class="profile-body">

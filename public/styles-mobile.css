@@ -1,0 +1,987 @@
+@media only screen and (max-width: 768px) and (min-width:321px){
+
+
+
+}
+
+
+
+
+
+@media only screen and (max-width: 768px) and (min-width:321px){
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+.get-know{
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+.typewriter  {
+  margin-left: 0px;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+.page-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 10px;
+  margin-left: 10px;
+  
+  font-size: 10px;
+}
+
+.page-header ul li {
+  margin: 4px;
+}
+.page-header ul {
+  display: flex;
+  width: auto;
+  flex-flow: row wrap;
+  margin-top: 0;
+  list-style-type: none;
+  padding-right: 0px;
+ 
+}
+
+.page-header ul li a {
+  font-size: 12px;
+    color: black;
+    font-weight: bold;
+    cursor: default;
+}
+
+.logo-container {
+  padding-left: 0px;
+}
+.logo-container img{
+height: 30px;
+}
+
+
+
+.all-components{
+flex-grow: 1;
+display: flex;
+align-items: center;
+}
+
+
+.skills-container {
+display: flex;
+flex-flow: row wrap;
+align-items: center;
+margin: 20px;
+}
+
+.skills-container img{
+width: 32px;
+height: 32px;
+}
+
+.loading-bar {
+position: relative;
+width: 100px;
+height: 10px;
+border-radius: 15px;
+overflow: hidden;
+}
+
+.skill-name p {
+font-size: 13px;
+}
+
+.knowme{
+font-size: 20px;
+}
+
+/*about */
+
+.email {
+  padding: 5.5% 0% 5.5% 0%;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+
+input {
+  padding: 8px;
+  width: 220px;
+  border: 1px solid #272525;
+  font-size: small;
+
+}
+
+::placeholder {
+  font-size: 14px;
+  opacity: 1;
+
+}
+
+textarea {
+  padding: 8px;
+  width: 220px;
+  resize: vertical;
+  font-size: small;
+  border: 1px solid #272525;
+}
+
+.icons>li {
+  padding: 0px 30px 0px 30px;
+}
+
+.icons{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding-top: 10px;
+}
+
+
+
+.button-send {
+  width: 238px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  font-size: small;
+
+}
+
+.button-send-type {
+  width: 160px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  font-size: small;
+
+}
+
+
+.send-arquitecture{
+
+display: flex;
+flex-flow: row;
+
+
+}
+
+
+.errors {
+  color: red;
+  margin: 7px 0px 0px 0px;
+  font-size: 14px;
+}
+
+
+.exp-section {
+  margin: 5px;
+  flex: 1;
+  display: flex;
+  flex-flow: column wrap;
+  font-size: 10px;
+  padding: 0%;
+  
+}
+
+.exp-section div {
+margin-left: 40px;
+margin-bottom: 10px;
+}
+
+
+
+.exp-component{
+display: flex;
+flex-flow: column wrap;
+justify-content: center;
+align-items: center;
+}
+
+
+.profile-wisdom-p-text {
+font-size: 13px;
+font-family: 'Share Tech Mono', monospace;
+}
+
+.profile-image img {
+  width: 164px;
+  height: 164px;
+  border-radius: 50%;
+}
+
+.profile-title p {
+font-size: 16px;
+font-weight: bold;
+}
+
+.profile-title {
+all: unset;
+
+}
+
+.no-mobile{
+all: unset;
+padding-top: 30px;
+
+}
+
+#profile {
+display: flex;
+flex-flow: column;
+align-items: center;
+
+}
+
+.profile-body {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+
+.profile-art article {
+margin: 50px;
+}
+
+
+.profile-art h3 {
+text-align: center;
+margin: 10px 0px 10px 0px;
+font-size: medium;
+}
+
+.profile-art p {
+font-size: small;
+font-weight: 100;
+}
+
+
+.proyects ul {
+display: flex;
+flex-flow: column;
+align-items: center;
+}
+
+
+.proyect-info div p {
+font-size: 10px;
+}
+
+
+
+.skill-porcent{
+text-align: right;
+width:100%;
+position: absolute;
+font-size: 10px;
+margin: -1px;
+}
+
+
+.seeMore{
+text-align: center
+}
+
+
+
+
+
+.profile-div {
+all: unset;
+}
+
+
+.pc-canvas{
+display: none;
+}
+
+
+.mobile-canvas{
+display:block;
+}
+
+
+
+.section-title{
+margin: 0px 0px 0px 0px;
+font-size: 12px;
+}
+
+.stacks{
+
+font-size: 9px;
+}
+.activity{
+
+all: unset;
+}
+
+
+.titles {
+font-size: 10px;
+font-weight: bolder;
+margin-bottom: 4px;
+}
+.section-education{
+margin-left:30px;
+}
+
+.section-career{
+margin-left: 20px;
+}
+
+.stack-title{
+margin-top: 10px ;
+font-size:11px;
+}
+
+
+.ex {
+animation-duration: 10s;
+animation-delay: 1s;
+}
+
+
+
+.profile-art p {
+font-size: 12px;
+font-weight: 100;
+}
+
+
+.titles-me {
+font-size: 15px;
+font-weight: bolder;
+margin-bottom: 4px;
+}
+
+.proyects-image {
+margin: 10px 0px 10px 0px;
+width: 350px;
+height: 200px;
+}
+
+.middle{
+opacity: 0;
+transition: .5s ease; 
+position: relative;
+width: 350px;
+height: 200px;
+top: -101%;
+
+}
+
+
+.proyects ul li {
+margin: 50px 0px 50px 0px;
+list-style-type: none;
+}
+
+.bounce-enter-active {
+animation: bounceOutUp .5s;
+
+}
+.bounce-leave-active {
+animation: bounceOutUp .5s reverse;
+display: none;
+}
+@keyframes bounceOutUp {
+0% {
+  transform: scale(0);
+}
+50% {
+  transform: scale(1.5);
+}
+100% {
+  transform: scale(1);
+}
+}
+
+
+@keyframes typing {
+from { width: 0 }
+to { width: 100% }
+}
+
+
+@keyframes blink-caret {
+from, to { border-color: transparent }
+50% { border-color: orange }
+}
+
+.resume {
+font-size: 20px;
+}
+
+.profile-wisdom-p-text {
+  font-size: 18px;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.profile-wisdom{
+margin-top: 50px;
+text-align: center;
+
+}
+
+}  
+
+
+@media only screen and (max-width: 320px) and (min-width:0px){
+
+.get-know {
+  font-size: 16px;
+  padding-bottom: 20px;
+}
+
+.skills-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin: 8px;
+}
+@keyframes typing {
+from { width: 0 }
+to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+from, to { border-color: transparent }
+50% { border-color: orange }
+}
+
+.typewriter  {
+margin-left: 0px;
+overflow: hidden; /* Ensures the content is not revealed until the animation */
+border-right: .15em solid orange; /* The typwriter cursor */
+white-space: nowrap; /* Keeps the content on a single line */
+letter-spacing: .15em; /* Adjust as needed */
+animation: 
+  typing 3.5s steps(30, end),
+  blink-caret .5s step-end infinite;
+}
+.page-footer {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-right: 10px;
+margin-left: 10px;
+
+font-size: 10px;
+}
+
+
+.page-header ul {
+display: flex;
+width: auto;
+flex-flow: row wrap;
+margin-top: 0;
+list-style-type: none;
+padding-right: 0px;
+
+}
+
+.page-header ul li a {
+font-size: 12px;
+  color: black;
+  font-weight: bold;
+  cursor: default;
+}
+
+.logo-container {
+padding-left: 0px;
+}
+.logo-container img{
+height: 30px;
+}
+
+
+
+.all-components{
+flex-grow: 1;
+display: flex;
+align-items: center;
+}
+
+.page-header ul li {
+margin: 2px;
+}
+
+
+
+.skills-container img{
+width: 32px;
+height: 32px;
+}
+
+.loading-bar {
+position: relative;
+width: 100px;
+height: 10px;
+border-radius: 15px;
+overflow: hidden;
+}
+
+.skill-name p {
+font-size: 13px;
+}
+
+.knowme{
+font-size: 20px;
+}
+
+/*about */
+
+.email {
+padding: 5.5% 0% 5.5% 0%;
+display: flex;
+align-items: center;
+flex-flow: column;
+}
+
+input {
+padding: 8px;
+width: 220px;
+border: 1px solid #272525;
+font-size: small;
+
+}
+
+::placeholder {
+font-size: 14px;
+opacity: 1;
+
+}
+
+textarea {
+padding: 8px;
+width: 220px;
+resize: vertical;
+font-size: small;
+border: 1px solid #272525;
+}
+
+.icons>li {
+padding: 0px 30px 0px 30px;
+}
+
+.icons{
+display: flex;
+flex-flow: row wrap;
+justify-content: center;
+list-style-type: none;
+padding-top: 10px;
+}
+
+
+
+.button-send {
+width: 238px;
+height: 40px;
+background-color: black;
+color: white;
+font-size: 15px;
+font-size: small;
+
+}
+
+.button-send-type {
+width: 160px;
+height: 40px;
+background-color: black;
+color: white;
+font-size: 15px;
+font-size: small;
+
+}
+
+
+.send-arquitecture{
+
+display: flex;
+flex-flow: row;
+
+
+}
+
+
+.errors {
+color: red;
+margin: 7px 0px 0px 0px;
+font-size: 14px;
+}
+
+
+.exp-section {
+margin: 5px;
+flex: 1;
+display: flex;
+flex-flow: column wrap;
+font-size: 10px;
+padding: 0%;
+
+}
+
+.exp-section div {
+margin-left: 40px;
+margin-bottom: 10px;
+}
+
+
+
+.exp-component{
+display: flex;
+flex-flow: column wrap;
+justify-content: center;
+align-items: center;
+}
+
+
+.profile-wisdom-p-text {
+font-size: 13px;
+font-family: 'Share Tech Mono', monospace;
+}
+
+.profile-image img {
+width: 164px;
+height: 164px;
+border-radius: 50%;
+}
+
+.profile-title p {
+font-size: 14px;
+font-weight: bold;
+}
+
+.profile-title {
+all: unset;
+
+}
+
+.no-mobile{
+all: unset;
+padding-top: 30px;
+
+}
+
+#profile {
+display: flex;
+flex-flow: column;
+align-items: center;
+
+}
+
+.profile-body {
+display: flex;
+flex-flow: column;
+align-items: center;
+}
+
+
+.profile-art article {
+margin: 50px;
+}
+
+
+.profile-art h3 {
+text-align: center;
+margin: 10px 0px 10px 0px;
+font-size: medium;
+}
+
+.profile-art p {
+font-size: small;
+font-weight: 100;
+}
+
+
+.proyects ul {
+display: flex;
+flex-flow: column;
+align-items: center;
+}
+
+
+.proyect-info div p {
+font-size: 10px;
+}
+
+
+
+
+.skill-porcent{
+text-align: right;
+width:100%;
+position: absolute;
+font-size: 10px;
+margin: -1px;
+}
+
+.seeMore{
+text-align: center
+}
+
+
+
+
+
+.profile-div {
+all: unset;
+}
+
+
+.pc-canvas{
+display: none;
+}
+
+
+.mobile-canvas{
+display:block;
+}
+
+
+
+.section-title{
+margin: 0px 0px 0px 0px;
+font-size: 12px;
+}
+
+.stacks{
+
+font-size: 9px;
+}
+.activity{
+
+all: unset;
+}
+
+
+.titles {
+font-size: 10px;
+font-weight: bolder;
+margin-bottom: 4px;
+}
+.section-education{
+margin-left:30px;
+}
+
+.section-career{
+margin-left: 20px;
+}
+
+.stack-title{
+margin-top: 10px ;
+font-size:11px;
+}
+
+
+.ex {
+animation-duration: 10s;
+animation-delay: 1s;
+}
+
+
+
+.profile-art p {
+font-size: 12px;
+font-weight: 100;
+}
+
+
+.titles-me {
+font-size: 15px;
+font-weight: bolder;
+margin-bottom: 4px;
+}
+
+.proyects-image {
+margin: 10px 0px 10px 0px;
+width: 350px;
+height: 200px;
+}
+
+.middle{
+opacity: 0;
+transition: .5s ease; 
+position: relative;
+width: 350px;
+height: 200px;
+top: -101%;
+
+}
+
+
+.proyects ul li {
+margin: 50px 0px 50px 0px;
+list-style-type: none;
+}
+
+.bounce-enter-active {
+animation: bounceOutUp .5s;
+
+}
+.bounce-leave-active {
+animation: bounceOutUp .5s reverse;
+display: none;
+}
+@keyframes bounceOutUp {
+0% {
+transform: scale(0);
+}
+50% {
+transform: scale(1.5);
+}
+100% {
+transform: scale(1);
+}
+}
+
+
+@keyframes typing {
+from { width: 0 }
+to { width: 100% }
+}
+
+
+@keyframes blink-caret {
+from, to { border-color: transparent }
+50% { border-color: orange }
+}
+
+.resume {
+font-size: 20px;
+}
+
+.profile-wisdom-p-text {
+font-size: 18px;
+font-family: 'Share Tech Mono', monospace;
+}
+
+.profile-wisdom{
+margin-top: 50px;
+text-align: center;
+
+}
+
+
+}
+
+
+@media only screen and (max-width:1024px) and (min-width:770px){
+ 
+    .get-know{
+      padding-top: 20px;
+      font-size: 26px;
+      padding-bottom: 20px;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: orange }
+    }
+    .typewriter  {
+      margin-left: 0px;
+      overflow: hidden; /* Ensures the content is not revealed until the animation */
+      border-right: .15em solid orange; /* The typwriter cursor */
+      white-space: nowrap; /* Keeps the content on a single line */
+      letter-spacing: .15em; /* Adjust as needed */
+      animation: 
+        typing 3.5s steps(30, end),
+        blink-caret .5s step-end infinite;
+    }
+  
+    .no-mobile {
+        all: unset;
+        padding-top: 30px;
+    }
+    
+    
+    
+    #profile {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+    
+    }
+    
+    
+    .profile-body {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    .profile-title {
+      all: unset;
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+    }
+    .profile-div{
+    all: unset;
+    }
+    
+    .profile-art article {
+      margin: 50px;
+    }
+    
+    .profile-art article h3{
+      font-size: 22px;
+      text-align: center;
+    }
+  
+    
+    .resume {
+      font-size: 20px;
+    }
+    
+    .profile-wisdom-p-text {
+        font-size: 28px;
+        font-family: 'Share Tech Mono', monospace;
+    }
+    
+    
+    .all-components{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    }
+  
+    .profile-wisdom{
+      margin-top: 50px;
+      text-align: center;
+      
+      }
+  
+      .skills-container {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        margin: 15px;
+    }
+    
+    } 
+    
