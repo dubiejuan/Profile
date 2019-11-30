@@ -38,14 +38,22 @@
      <!-- <div class="pc-canvas" >
        <vue-canvas-nest  :config="{color: '0,0,0',count: 250,opacity: 1, zIndex: -1}" ></vue-canvas-nest>
      </div> -->
-     
-      <!-- <div class="mobile-canvas">
-        mobile
-        <vue-canvas-nest   :config="{color: '0,0,0',count: 250,opacity: 1, zIndex: -1}" ></vue-canvas-nest> 
-      </div>  -->
-     
- 
-   <div  class="all-components" v-show="component.profile" >
+        <vue-particles
+        color="#ffa500"
+        :particleOpacity="1"
+        :particlesNumber="50"
+        shapeType="circle"
+        :particleSize="4"
+        linesColor="#000000"
+        :linesWidth="1"
+        :lineLinked="true"
+        :lineOpacity="0.5"
+        :linesDistance="150"
+        :moveSpeed="3"
+      >
+   </vue-particles> 
+
+ <div  class="all-components" v-show="component.profile" >
     <Profile/>
     </div> 
 
@@ -53,9 +61,9 @@
      <Experience/>
     </div>
 
-      <!-- <div class="all-components" v-if="component.proyects" >
+      <div class="all-components" v-if="component.proyects" >
     <Proyects/>
-    </div> -->
+    </div> 
     
      <div class="all-components" v-if="component.skills" >
     <Skills/>
@@ -63,14 +71,15 @@
 
     <div class="all-components" v-show="component.info">
     <Info/>
-    </div>    
-
+    </div>  
+   
   </main>
   <footer class="page-footer">
      <small>© Copyright 2019. All rights reserved.</small>
      <small>developed by Juan Dubie</small>
   </footer>
 </div>
+
   
 </template>
 

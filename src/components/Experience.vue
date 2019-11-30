@@ -5,8 +5,8 @@
       <ul class="section-education">
         <li v-for="item in education" v-bind:key="item.id">
           <div>
-          <p class="titles btn-2"> {{item.name}} </p>
-          <span  class="stacks btn-2 " v-for="type in item.types" v-bind:key="type.id">{{type.name}}</span>
+          <p class="titles btn-2" style="color:black;"> {{item.name}} </p>
+          <span  class="stacks btn-2" style="color:black;" v-for="type in item.types" v-bind:key="type.id">{{type.name}}</span>
         </div>
         </li>
       </ul>
@@ -16,10 +16,10 @@
      <ul class="section-career">
         <li v-for="data in career">
           <div>
-          <p class="titles btn-2 "> {{data.name}} </p>
+          <p class="titles btn-2" style="color:black;"> {{data.name}} </p>
           <span class="activity btn-2 "  v-for="activity in data.activity" v-bind:key="activity.id">{{activity.name}}</span>
           <p class="stack-title ">Stacks:</p>
-          <span  class="stacks btn-2 "  v-for="stacks in data.stacks" >{{stacks.type}}:&nbsp;{{stacks.name}}</span>
+          <span  class="stacks btn-2 "  style="color:black;" v-for="stacks in data.stacks" >{{stacks.type}}:&nbsp;{{stacks.name}}</span>
         </div>
         </li>
       </ul>

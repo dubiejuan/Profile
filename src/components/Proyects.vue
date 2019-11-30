@@ -3,9 +3,8 @@
 <ul>
 <transition-group  v-if="window.flag"  name="bounce">
  <li  v-for="item in filtered_proyects" v-bind:key="item.id">
-  
    <div class="proyects-name">
-      <h3>
+      <h3 >
        {{item.name}}
       </h3>
     </div>
@@ -18,7 +17,7 @@
       <h4>
        About
       </h4>
-       <p style="margin-top:10px">{{item.about}} </p>
+       <p style="margin-top:10px;color: white;">{{item.about}} </p>
     </div>
     <div>
       <h4>
@@ -26,7 +25,7 @@
       </h4>
       <div class="stacks"> 
       <p  v-for="stacks in item.stacks" v-bind:key="stacks.id">
-        <span>{{stacks.name}}</span>       
+        <span style=" color: white;">{{stacks.name}}</span>       
       </p>
       </div>
       </div>
@@ -53,7 +52,7 @@
       <h4>
        About
       </h4>
-       <p style="margin-top:10px">{{item.about}} </p>
+       <p style= "color:white;margin-top:10px">{{item.about}} </p>
     </div>
     <div>
       <h4>
@@ -163,14 +162,14 @@ methods:{
 
    handleResize() {
       this.window.width = window.innerWidth;
-       this.window.flag = this.window.width <= 700 ? true:false
+       this.window.flag = this.window.width <= 900 ? true:false
       
     }
 
   },
   computed: {
        filtered_proyects(){
-            if(this.window.width <= 700 ){
+            if(this.window.width <= 900 ){
             return this.proyects.slice(this.filter.start ,this.filter.limit )
             }else{
              return this.proyects
