@@ -72,7 +72,7 @@
           },
            {
            id:3,
-            name:'LIC. EN GESTIÓN DE TECNOLOGÍA DE LA INFORMACIÓN @ UADE',
+            name:'Computer Engineering @ UADE',
             types:[
               {
               id:1,
