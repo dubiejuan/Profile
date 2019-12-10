@@ -122,6 +122,30 @@
          
             img: '/images/css.png'
           },
+           {
+            id:13,
+            lang: "Reactjs",
+            percent: 0,
+            percentMax: 40,
+         
+            img: '/images/react.png'
+          },
+           {
+            id:14,
+            lang: "Angular",
+            percent: 0,
+            percentMax: 40,
+         
+            img: '/images/angular.png'
+          },
+           {
+            id:15,
+            lang: "Nginx",
+            percent: 0,
+            percentMax: 70,
+         
+            img: '/images/nginx.png'
+          },
            
         ]
       }
