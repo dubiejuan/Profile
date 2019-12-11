@@ -1,4 +1,5 @@
 <template>
+ <!-- <a v-bind:class="[component.info===true?'active':'']" v-on:click="changeComponents('info')">Contact</a> -->
 <div class="wrapper">
   <header class="page-header">
    <nav>
@@ -7,37 +8,30 @@
      </div>
     <ul >
       <li>
-          <a  v-bind:class="[component.profile===true?'active':'']" v-on:click="changeComponents('profile')">
-            Profile
-          </a>
-      
+        
+        <router-link    v-on:click="changeComponents('profile')"  :to="{ name: 'profile' }">Profile</router-link>
       </li>
       <li>    
-        <a  v-bind:class="[component.experience===true?'active':'']" v-on:click="changeComponents('experience')">
-               Experience
-          </a>
+        
+           <router-link  v-on:click="changeComponents('experience')" :to="{ name: 'experience' }">Experience</router-link>
       </li>
       <li>         
-        <a v-bind:class="[component.proyects===true?'active':'']" v-on:click="changeComponents('proyects')">
-               Proyects
-          </a>
+       
+           <router-link v-on:click="changeComponents('proyects')" :to="{ name: 'proyects' }">Proyects</router-link>
       </li>
        <li> 
-          <a  v-bind:class="[component.skills===true?'active':'']" v-on:click="changeComponents('skills')">
-            Skills
-          </a>
+        
+           <router-link  v-on:click="changeComponents('skills')" :to="{ name: 'skills' }">Skills</router-link>
       </li>
-      <li>  
-        <a v-bind:class="[component.info===true?'active':'']" v-on:click="changeComponents('info')">Contact</a>
+      <li> 
+          <router-link    v-on:click="changeComponents('info')" :to="{ name: 'info' }">Contact</router-link>
+      
       </li>
     </ul>
   </nav>
   </header>
 
   <main   class="page-main">
-     <!-- <div class="pc-canvas" >
-       <vue-canvas-nest  :config="{color: '0,0,0',count: 250,opacity: 1, zIndex: -1}" ></vue-canvas-nest>
-     </div> -->
         <vue-particles
         color="#ffa500"
         :particleOpacity="1"
@@ -52,27 +46,9 @@
         :moveSpeed="3"
       >
    </vue-particles> 
-
- <div  class="all-components" v-show="component.profile" >
-    <Profile/>
+   <div class="all-components">
+  <router-view ></router-view>
     </div> 
-
-    <div class="all-components" v-show="component.experience" >
-     <Experience/>
-    </div>
-
-      <div class="all-components" v-if="component.proyects" >
-    <Proyects/>
-    </div> 
-    
-     <div class="all-components" v-if="component.skills" >
-    <Skills/>
-    </div> 
-
-    <div class="all-components" v-show="component.info">
-    <Info/>
-    </div>  
-   
   </main>
   <footer class="page-footer">
      <small>© Copyright 2019. All rights reserved.</small>
@@ -90,9 +66,6 @@ import Info from './components/Info.vue'
 import Proyects from './components/Proyects.vue'
 import Skills from './components/Skills.vue'
 import { mapState, mapActions,mapMutations,mapGetters } from 'vuex'
-import vueCanvasNest from 'vue-canvas-nest'
-
-
 
 export default {
   name: 'app',
@@ -102,7 +75,6 @@ export default {
     Proyects,
     Skills,
     Info,
-    vueCanvasNest
   },
 
   data: () => {
