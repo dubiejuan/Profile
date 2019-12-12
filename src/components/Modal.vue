@@ -54,6 +54,7 @@ export default {
     ]),
       ...mapMutations([
       'closeModalVuex',
+      'resetEmail'
     ]),
 close() {
     this.closeModalVuex()
@@ -64,6 +65,7 @@ async sendData(type){
   try{
     if(this.sendtype===2){
    await this.sendEmailGraphql(this.mail) 
+   await this.resetEmail()
      this.emailsent=true  
     setTimeout(() => {
         this.emailsent=false
@@ -71,7 +73,9 @@ async sendData(type){
        }, 2000);
     }else{
       await this.sendEmailRest(this.mail) 
+      await this.resetEmail()
       this.emailsent=true
+      
       setTimeout(() => { 
         this.emailsent=false
         this.closeModalVuex()
