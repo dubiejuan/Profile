@@ -51,7 +51,7 @@
     </div> 
   </main>
   <footer class="page-footer">
-     <small>© Copyright 2019. All rights reserved.</small>
+     <small>© Copyright {{new Date().getFullYear()}}. All rights reserved.</small>
      <small>developed by Juan Dubie</small>
   </footer>
 </div>
@@ -60,23 +60,12 @@
 </template>
 
 <script>
-import Profile from './components/Profile.vue'
-import Experience from './components/Experience.vue'
-import Info from './components/Info.vue'
-import Proyects from './components/Proyects.vue'
-import Skills from './components/Skills.vue'
-import { mapState, mapActions,mapMutations,mapGetters } from 'vuex'
+
+import { mapMutations,mapGetters } from 'vuex'
 
 export default {
   name: 'app',
-  components: {
-    Profile,
-    Experience,
-    Proyects,
-    Skills,
-    Info,
-  },
-
+  
   data: () => {
     return {
       flag :false
